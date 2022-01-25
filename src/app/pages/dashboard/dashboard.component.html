@@ -1,0 +1,29 @@
+<div class="row pl-3">
+  <button
+    type="button"
+    (click)="onSubscribe()"
+    class="btn btn-primary btn-round"
+  >
+    {{ button_text }}
+  </button>
+  <button
+    *ngIf="graph_data_values.length && button_text !== 'UNSUBSCRIBE'"
+    type="button"
+    (click)="onClear()"
+    class="btn ml-3 btn-info btn-round"
+  >
+    CLEAR
+  </button>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">Number of values</h5>
+      </div>
+      <div class="card-body">
+        <canvas id="main_graph" width="400" height="100"></canvas>
+      </div>
+    </div>
+  </div>
+</div>
